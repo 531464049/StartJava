@@ -2,13 +2,14 @@
 import java.util.Date;
 
 import MUtils.MUtil;
-import Notes.Note;
+import Notes.Music;
+import Notes.Wind;
 
 public class App {
     public static void main(String[] args) {
         System.out.println(new Date());
-        test();
-        Note n = Note.MIDDLE_C;
+        // test();
+        test_note();
     }
 
     private static void test() {
@@ -18,5 +19,10 @@ public class App {
         MUtil.log(i);
         MUtil.log("i++ :" + i++);
         MUtil.log(i);
+    }
+
+    private static void test_note() {
+        Wind fluteWind = new Wind();
+        Music.tune(fluteWind);
     }
 }
